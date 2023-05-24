@@ -82,6 +82,7 @@ public class Registration extends JFrame implements ActionListener {
         ta1.setBounds(130,240,200,50);
         c.add(ta1);
 
+        //creates a new checkbox with no text
         terms = new JCheckBox("Please accept terms conditions");
         terms.setBounds(50,300,200,20);
         c.add(terms);
@@ -110,6 +111,7 @@ public class Registration extends JFrame implements ActionListener {
             if(female.isSelected()){
                 gender = "female";
             }
+            JOptionPane.showMessageDialog(Registration.this, gender); // MessageDialog to show information selected radio buttons.
             String dob = day.getSelectedItem()+"/"+month.getSelectedItem()+"/"+year.getSelectedItem();
             String address = ta1.getText();
             screen.setText("Name : "+name+"\n"+"Mobile : "+mobile+"\n"+"Gender : "+gender+"\n"+"Date of birthday : "+dob+"\n"+"Address : "+address);
